@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Web</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>サンプル</title>
+</head>
+<body>
+    <h1>Sample Web Site</h1>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

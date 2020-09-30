@@ -1,0 +1,22 @@
+version: "3"
+services:
+  python:
+    # python フォルダ直下のDockerfileを使用
+    build: ./python/
+    volumes:
+      - ./python:/work
+    command: python /work/main.py
+    ports:
+        - 5000:5000
+
+  mysql:
+    # mysqlフォルダ直下のDockerfileを使用
+    build: ./mysql/
+    env_file: ./python/database/config/mysql.env
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      # データを永続化させたい場合は、コメントアウトを解除してください
+      # - ./mysql/data:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 3306:3306

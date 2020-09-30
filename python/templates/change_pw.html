@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="home-content">
+    <h2 class="page-title">パスワード変更</h2>
+    {% if info != "" %}
+    <p><span class="info-err">※{{ info }}</span></p>
+    {% endif %}
+    <form action="/change_pw/{{username}}", method="POST">
+        <div>
+            <label for="befor_pw">変更前パスワード：<span class="required">必須</span></label>
+            <input type="password" name="befor_pw" placeholder="変更前パスワード" class="text-area"><br>
+            <label for="after_pw">変更後パスワード：<span class="required">必須</span></label>
+            <input type="password" name="after_pw" placeholder="変更後パスワード" class="text-area"><br>
+            <label for="check_pw">パスワード再確認：<span class="required">必須</span></label>
+            <input type="password" name="check_pw" placeholder="変更後パスワード再確認" class="text-area"><br>
+        </div>
+        <div>
+            <a href="/home/{{ username }}" class="button a-hiddenborder">戻る</a>
+            <input type="submit" value="変更" name="change" class="button">
+        </div>
+    </form>
+</div>
+{% endblock %}
