@@ -6,6 +6,12 @@ This is a sample web site program by python
 
 docker
 
+* 下記のライブラリを使用しております。(※実際にインストールする必要はありません。)
+
+* mysql-connector-python 8.0.19
+* Flask 1.0.2
+* python-dotenv 0.14.0
+
 # Installation
 
 * Windows(docker toolboxを使用した方が良いかもしれません)
