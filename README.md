@@ -4,7 +4,7 @@ This is a sample web site program by python
 
 # Requirement
 
-docker
+* docker
 
 * 下記のライブラリを使用しております。(※実際にインストールする必要はありません。)
 
