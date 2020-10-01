@@ -31,7 +31,7 @@ docker login
 # Usage
 
 ```bash
-cd examples
+mkdir examples && cd examples
 git clone https://github.com/Jp29tkDg79/samplewebsite.git
 docker-compose build
 docker-compose up -d
