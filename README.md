@@ -8,8 +8,10 @@ docker
 
 # Installation
 
-* Windows
+* Windows(docker toolboxを使用した方が良いかもしれません)
 * https://hub.docker.com/editions/community/docker-ce-desktop-windows
+* Docker Toolbox
+* https://docs.docker.com/toolbox/toolbox_install_windows/
 
 * Mac
 * https://hub.docker.com/editions/community/docker-ce-desktop-mac
@@ -35,6 +37,23 @@ mkdir examples && cd examples
 git clone https://github.com/Jp29tkDg79/samplewebsite.git
 docker-compose build
 docker-compose up -d
+```
+
+* mysqlのテーブル情報を確認する場合
+
+```bash
+docker-compose exec mysql bash
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD
+
+mysql> show databases;
+mysql> use test_database;
+mysql> show tables;
+mysql> select * from persons;
+```
+
+* コンテナ内から抜ける場合
+```bash
+exit
 ```
 
 # Author
